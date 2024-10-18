@@ -1,3 +1,8 @@
+package Tests;
+
+import Config.CourierApi;
+import Dto.CourierDto;
+import Dto.LoginDto;
 import io.qameta.allure.Step;
 import org.junit.After;
 import org.junit.Before;

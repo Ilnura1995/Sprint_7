@@ -1,5 +1,11 @@
+package Tests;
+
+import Config.CourierApi;
+import Dto.CourierDto;
+import Dto.LoginDto;
 import io.qameta.allure.Step;
 import io.restassured.response.Response;
+import jdk.jfr.Name;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;

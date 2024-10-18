@@ -1,7 +1,12 @@
-import io.qameta.allure.Step;
+package Tests;
+
+import Config.OrderApi;
+import io.qameta.allure.junit4.DisplayName;
 import org.junit.Before;
 import org.junit.Test;
-import static org.hamcrest.Matchers.*;
+
+import static org.hamcrest.Matchers.greaterThan;
+import static org.hamcrest.Matchers.notNullValue;
 
 public class OrderListTest {
     private int courierId; // ID курьера для теста
@@ -21,7 +26,8 @@ public class OrderListTest {
     }
 
     @Test
-    @Step("Получение списка заказов")
+    @DisplayName("Получение списка заказов для курьера")
+
     public void getOrderListTest() {
         // Отправляем запрос для получения списка заказов
         orderApi.getOrderList(courierId, nearestStation, limit, page)

@@ -1,3 +1,5 @@
+package Dto;
+
 public class OrderListDto {
     private int courierId;
     private String nearestStation;

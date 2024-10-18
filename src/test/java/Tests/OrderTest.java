@@ -1,3 +1,7 @@
+package Tests;
+
+import Config.OrderApi;
+import Dto.OrderDto;
 import io.qameta.allure.Step;
 import org.junit.After;
 import org.junit.Before;
