@@ -1,7 +1,7 @@
-package Config;
+package config;
 
-import Dto.CourierDto;
-import Dto.LoginDto;
+import dto.CourierDto;
+import dto.LoginDto;
 import io.restassured.RestAssured;
 import io.restassured.response.Response;
 

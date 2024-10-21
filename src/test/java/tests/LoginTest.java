@@ -1,9 +1,10 @@
-package Tests;
+package tests;
 
-import Config.CourierApi;
-import Dto.CourierDto;
-import Dto.LoginDto;
+import config.CourierApi;
+import dto.CourierDto;
+import dto.LoginDto;
 import io.qameta.allure.Step;
+import io.qameta.allure.junit4.DisplayName;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -33,7 +34,7 @@ public class LoginTest {
     }
 
     @Test
-    @Step("Авторизация курьера с валидными данными")
+    @DisplayName("Авторизация курьера с валидными данными")
     public void loginCourier() {
         // Создаем курьера с валидными данными
         CourierDto courier = new CourierDto(login, password, firstName);
@@ -53,7 +54,7 @@ public class LoginTest {
     }
 
     @Test
-    @Step("Авторизация курьера с невалидными данными")
+    @DisplayName("Авторизация курьера с невалидными данными")
     public void loginWithInvalidCredentials() {
         // Пытаемся логиниться с неверными данными
         LoginDto loginDto = new LoginDto(invalidLogin, invalidPassword);
@@ -65,7 +66,7 @@ public class LoginTest {
     }
 
     @Test
-    @Step("Авторизация курьера с недостающими полями")
+    @DisplayName("Авторизация курьера с недостающими полями")
     public void loginWithoutRequiredField() {
         // Пытаемся логиниться без пароля
         LoginDto jsonWithoutPassword = new LoginDto();
@@ -91,7 +92,7 @@ public class LoginTest {
     }
 
     @After
-    @Step("Удаление учётной записи курьера")
+    @DisplayName("Удаление учётной записи курьера")
     public void tearDown() {
         // После тестов, если есть ID курьера, удаляем его
         if (courierId != null) {

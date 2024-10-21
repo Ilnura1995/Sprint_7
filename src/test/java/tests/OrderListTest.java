@@ -1,6 +1,6 @@
-package Tests;
+package tests;
 
-import Config.OrderApi;
+import config.OrderApi;
 import io.qameta.allure.junit4.DisplayName;
 import org.junit.Before;
 import org.junit.Test;

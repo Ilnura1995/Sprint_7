@@ -1,7 +1,6 @@
-package Config;
+package config;
 
-import Config.ApiConfig;
-import Dto.OrderDto;
+import dto.OrderDto;
 import io.restassured.RestAssured;
 import io.restassured.response.Response;
 

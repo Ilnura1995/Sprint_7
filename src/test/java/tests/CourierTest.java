@@ -1,11 +1,11 @@
-package Tests;
+package tests;
 
-import Config.CourierApi;
-import Dto.CourierDto;
-import Dto.LoginDto;
+import config.CourierApi;
+import dto.CourierDto;
+import dto.LoginDto;
 import io.qameta.allure.Step;
+import io.qameta.allure.junit4.DisplayName;
 import io.restassured.response.Response;
-import jdk.jfr.Name;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -52,7 +52,7 @@ public class CourierTest {
     }
 
     @Test
-    @Step("Попытка создания дубликата курьера")
+    @DisplayName("Попытка создания дубликата курьера")
     public void duplicateCourierCreation() {
         // Создаем первого курьера
         CourierDto courier = new CourierDto(login, password, firstName);
@@ -75,7 +75,7 @@ public class CourierTest {
     }
 
     @Test
-    @Step("Создание курьера без обязательных полей")
+    @DisplayName("Создание курьера без обязательных полей")
     public void createCourierWithoutRequiredFields() {
         // Пытаемся создать курьера без пароля
         CourierDto jsonWithoutPassword = new CourierDto();
@@ -95,7 +95,7 @@ public class CourierTest {
     }
 
     @Test
-    @Step("Создание курьера с уже зарегистрированным логином")
+    @DisplayName("Создание курьера с уже зарегистрированным логином")
     public void createCourierWithRegisteredLogin() {
         // Пытаемся создать курьера с логином, который уже существует
         CourierDto json = new CourierDto();

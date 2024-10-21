@@ -1,8 +1,8 @@
-package Tests;
+package tests;
 
-import Config.OrderApi;
-import Dto.OrderDto;
-import io.qameta.allure.Step;
+import config.OrderApi;
+import dto.OrderDto;
+import io.qameta.allure.junit4.DisplayName;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -44,7 +44,7 @@ public class OrderTest {
     }
 
     @Test
-    @Step("Создание заказа с цветами: {0}") // Шаг с описанием цветов
+    @DisplayName("Создание заказа с цветами: {0}") // Шаг с описанием цветов
     public void orderCreationTest() {
         // Создаем объект заказа, используя заданные параметры
         OrderDto orderDto = new OrderDto(/* параметры заказа, включая colorParam */);
