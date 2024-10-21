@@ -51,6 +51,7 @@ public class CourierTest {
                 .extract().jsonPath().getString("id"); // Извлекаем ID курьера
     }
 
+
     @Test
     @DisplayName("Попытка создания дубликата курьера")
     public void duplicateCourierCreation() {
